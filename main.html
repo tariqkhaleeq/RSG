@@ -14,7 +14,7 @@
     <!--Navbar-->
     <!--TODO: 1. fix the collapsable part. The contents are outside the burger icon.
               2. How can you change the background color-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="#">Image</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -49,12 +49,13 @@
       <h1>Hello world!</h1>
     </div>
 
-    <footer>
-      <div class="container-fluid bg-primary">
-        <nav role="navigation">
-          <div class="col-md-4 center"><p>Content here</p></div>
-          <div class="col-md-4 center"><p>Content here</p></div>
-          <div class="col-md-4 center"><p>Content here</p></div>
+    <footer class="indigo">
+      <div class="container-fluid">
+        <nav class ="fixed-bottom bg-primary text-light">
+          <div class="row justify-content-md-center">
+            <div class="col-lg-auto center"><p>Content here</p></div>
+            <div class="col-lg-auto center"><p>Content here</p></div>
+          </div>
         </nav>
       </div>
     </footer>
