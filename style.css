@@ -70,3 +70,43 @@
 a:link {
     text-decoration: none;
 }
+
+.banner {
+    background: url(media/banner.svg) center center no-repeat;
+    background-size: cover;
+    min-height: 330px;
+}
+
+.wrapper {
+    margin: 0 auto; /* This is what centers it */
+    max-width: 1000px;
+    width: 96%;
+ }
+
+.btn-round-lg{
+    border-radius: 22.5px;
+}
+
+.btn-round-lg:hover {
+    opacity: 0.7;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: #979797;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+}
+.carousel-indicators .active {
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    background-color: #4A90E2;
+    border-color: black
+}
