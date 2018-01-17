@@ -14,51 +14,60 @@
     <link href="./style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <style>
+    body{
+      font-family: 'Roboto';
+    }
+    </style>
 </head>
 
 <body>
-  <!--TODO: Shift Events next to home.-->
-    <nav class="navbar navbar-expand-md navbar-custom top">
-        <a class="navbar-brand" href="main.html">RSG Germany</a>
+  <!--TODO: Shift Events next to home.
+            Fix footer
+            Fix banner
+          Add splash for Join me and subscribe-->
+    <nav class="navbar navbar-expand-md top oxford_background ">
+        <a class="navbar-brand text-white" href="main.html">RSG Germany</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto text-white">
                 <li class="nav-item active">
                     <a class="nav-link" href="main.html">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="about.html">About</a>
+                    <a class="nav-link disabled text-white" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="events.html">Events</a>
+                    <a class="nav-link disabled text-white" href="events.html">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="contact.html">Contact</a>
+                    <a class="nav-link disabled text-white" href="contact.html">Contact</a>
                 </li>
             </ul>
         </div>
 
     </nav>
 
-    <main role="main" class="container">
+    <main role="main">
         <div class="banner">
             <div class="wrapper">
                 <div class="col-6 offset-6">
                     <div class="container">
                         <div class="row">
                             <div>
-                                <h1 style="color: white">Connecting computational biologists with the rest of Germany</h1>
+                                <h1>Connecting computational biologists with the rest of Germany</h1>
                             </div>
                         </div>
                         <div class="row">
                             <div class="mx-auto">
-                                <button type="button" class="btn btn-primary btn-round-lg btn-lg oxford">Join now</button>
+                                <button type="button" class="btn btn-round-lg btn-lg oxford_background text-white">Join now</button>
                             </div>
                         </div>
                     </div>
@@ -68,7 +77,7 @@
 
         <hr/>
 
-        <div>
+        <div class="container">
             <h2 style="text-align: center">What is RSG Germany</h2>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -87,7 +96,7 @@
             <h2 style="text-align: center">Current events in Germany</h2>
 
             <div id="carouselExampleIndicators" class="carousel slide" role="listbox" data-ride="carousel" style="width: 60%; margin: 0 auto;">
-                <ol class="carousel-indicators", style="bottom: -10%">
+                <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -135,37 +144,45 @@
 
             <div class="row">
                 <div class="mx-auto">
-                    <button type="button" class="btn btn-primary btn-round-lg btn-lg" style="background-color: #002C5A; color: white;">Subscribe</button>
+                    <button type="button" class="btn btn-round-lg btn-lg oxford_background text-white" >Subscribe</button>
                 </div>
             </div>
         </div>
 
         <p></p>
-
-        <footer class="footer text-muted">
+<!--TODO: Fix footer; add rows properly-->
+        <footer class="oxford_background">
+          <div class="container">
             <div class="row">
-                <div class="col-4">
-                    <address class="ml-4">
-                        Street no. 123
-                        <br> City somewhere
-                        <br> Country somewhere
-                        <br>
-                    </address>
+                <div class="col-4 text-white  ">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        Street no.123
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="col-lg-5 ">
+                        City Somewhere
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="col-lg-6 ">
+                        Country Somewhere
+                      </div><div class="w-100"></div>
+                    </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4 text-white">
                     <ul class="mx-auto" style="list-style-type: none; padding: 0; text-align: center">
                         <li>
-                            <a href="main.html">Home</a>
+                            <a class="text-white" href="main.html">Home</a>
                         </li>
                         <li>
-                            <a href="about.html">About</a>
+                            <a class="text-white"href="about.html">About</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a class="text-white"href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-4 text-white">
                     <address class="mr-4" style="text-align: right">
                         Follow us:
                         <br>
@@ -175,9 +192,10 @@
                     </address>
                 </div>
             </div>
-            <div class="row">
+            <div class="row text-white">
                 <p class="mx-auto">Trademarked 2018</p>
             </div>
+          </div>
         </footer>
     </main>
 
@@ -185,11 +203,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="./bootstrap_source/assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./bootstrap_source/assets/js/vendor/popper.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 </body>
 
 </html>

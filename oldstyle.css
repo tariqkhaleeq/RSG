@@ -1,0 +1,115 @@
+.oxford {
+  color: #00356B;
+}
+.navbar-custom {
+    background-color: #002C5A;
+    border-color: #91A3B7;
+    border-radius: 0;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+    color: #00356B;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color: #FFF;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+    background-color: #91A3B7;
+}
+
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+    color: #FFF;
+    background-color: #606c7a;
+}
+
+.navbar-custom .navbar-text {
+    color: #FFF;
+}
+
+.navbar-custom .navbar-toggle {
+    border-color: #91A3B7;
+}
+
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+    background-color: #91A3B7;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+
+.footer {
+    background-color: #002C5A;
+    color: #FFF;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.banner {
+    background: url(media/banner.svg) center center no-repeat;
+    background-size: cover;
+    min-height: 330px;
+}
+
+.wrapper {
+    margin: 0 auto; /* This is what centers it */
+    max-width: 1000px;
+    width: 96%;
+ }
+
+.btn-round-lg{
+    border-radius: 22.5px;
+}
+
+.btn-round-lg:hover {
+    opacity: 0.7;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: #979797;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+}
+.carousel-indicators .active {
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    background-color: #4A90E2;
+    border-color: black
+}
