@@ -27,44 +27,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-}
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
 
     </style>
 </head>
@@ -91,12 +54,14 @@
                     <a class="nav-link disabled text-white" href="events.html">Events</a>
                 </li>
                 <li class="nav-item">
-					<a class="dropbtn">
-                    <a class="nav-link disabled text-white" href="about.html">About</a></a>
-                    <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-					<a href="#">Link 2</a>
-					</div>
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          About
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">New Team</a>
+          <a class="dropdown-item" href="#">Old Spartan</a>
+         
+        </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled text-white" href="newsletter.html">Newsletter</a>
@@ -116,7 +81,7 @@
                     <div class="container">
                         <div class="row">
                             <div>
-                                <h1>Connecting computational biologists with the rest of Germany</h1>
+                                <br><h1>Connecting computational biologists with the rest of Germany</h1>
                             </div>
                         </div>
                         <div class="row">
