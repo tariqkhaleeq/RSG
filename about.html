@@ -63,19 +63,33 @@
               <img src="media/yvonne.png" alt="Yvonne Gladbach" class="img-thumbnail"></img>
             </div>
             <div class="col-lg-3">
-              <p>Yvonne Saara Gladbach<br>President<br></p>
+              <p class="font-weight-bold">Yvonne Saara Gladbach<br>President</p>
 
-              <p class="">(University Rostock (IBIMA),  University Heidelberg) <br>
+              <p class="font-italic">University Rostock, University Heidelberg</p>
 
-				Yvonne is the president after the re-activation of the RSG Germany, a
-				PhD student for computational biology, doing me2sports and involved in
-				volunteer work. Her PhD work focuses on the best drug predictions for
-				acute leukemia as well as other projects to evaluate PD and Alzheimer.
-				The former work was about antibiotic resistances, bacteria subtyping of
-				hospital strains and the differences in early- and elderly-onset
-				prostate cancer.</p>
-
-             
+      				<p class="text-truncate">Yvonne is the president after the re-activation of the RSG Germany, a
+      				PhD student for computational biology, doing me2sports and involved in
+      				volunteer work. Her PhD work focuses on the best drug predictions for
+      				acute leukemia as well as other projects to evaluate PD and Alzheimer.
+      				The former work was about antibiotic resistances, bacteria subtyping of
+      				hospital strains and the differences in early- and elderly-onset
+      				prostate cancer.</p>
+              <button type="button" class="btn btn-link" data-toggle="modal" data-target="#Yvonne">Read more</button>
+                <div class="modal fade" id="Yvonne" tabindex="-1" role="dialog" aria-labelledby="Yvonne" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
             </div>
             <div class="col-lg-2">
@@ -91,7 +105,7 @@
 			single-cell RNA sequencing data. As the vice president of RSG Germany he makes sure that stuff gets done
 			and reminds people of what they have to do, when he doesn't forget it himself. </p>
 
-              
+
 
             </div>
           </div>
@@ -109,7 +123,7 @@
 				genome. He is a strong believer in opportunities that the student associations offer to connect to people, learn ideas
 				and empower budding computational biologists.</p>
 
-            
+
 
             </div>
             <div class="col-lg-2">
@@ -146,7 +160,7 @@
               <p>Ilkay Bashak Uysal<br>PR Member<br></p>
               <p class="">Universität des Saarlandes</p>
 
-             
+
               <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                  Proin efficitur ac libero et tincidunt.</p>
 
@@ -169,16 +183,17 @@
             </div>
             <div class="col-lg-3">
 
-              <p>Tommaso Andreani<br>Communication Adviser<br></p>   
+              <p>Tommaso Andreani<br>Communication Adviser<br></p>
               <p class="">Johannes Gutenberg University Mainz, Institute of Molecular Biology Mainz</p>
-              <p class="">Tommaso is a Doctoral candidate at the Institute of Molecular Biology in Mainz at 
-              the Computational Biology, DNA Demethylation and Reprogramming laboratories under the supervision 
-              of Miguel Andrade and Christof Niehrs. He is using computational and statistical approaches to study 
-              the DNA demethylation and repair pathway in mouse ES cells and he is developing a method able to 
+              <p class="">Tommaso is a Doctoral candidate at the Institute of Molecular Biology in Mainz at
+              the Computational Biology, DNA Demethylation and Reprogramming laboratories under the supervision
+              of Miguel Andrade and Christof Niehrs. He is using computational and statistical approaches to study
+              the DNA demethylation and repair pathway in mouse ES cells and he is developing a method able to
               distinguish "hot" vs "stochastically variable" regions in an isogenic population of mammalian cells using ChIP experiments.</p>
 
             </div>
           </div>
+        </div>
       </div>
 
       <div class="container">
@@ -261,6 +276,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+    $('#exampleModal').modal(options)
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="./bootstrap_source/assets/js/vendor/jquery.min.js"><\/script>')</script>
