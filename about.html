@@ -23,7 +23,7 @@
     }
   </style>
 </head>
-<!--TODO:Fix image size; What is going on in the footer?!?!-->
+<!--TODO:Fix image size;-->
 
 <body>
   <nav class="navbar navbar-expand-md oxford_background top">
@@ -276,6 +276,7 @@
         <h2 class="text-center mb-5">Interested in joining the team?</h2>
       </div>
     </div>
+
     <div class="row">
       <div class="mx-auto">
         <button type="button" class="btn btn-round-lg btn-lg oxford_background text-white mb-5" data-toggle="modal" data-target="#exampleModalCenter2">Join now</button>
@@ -302,14 +303,41 @@
 
             <small id="emailHelp" class="form-text text-muted text-center">We'll never share your email with anyone else.</small>
             <div class="modal-footer">
-              <button onClick="jSubmit()" data-dismiss="modal"type="submit" class="mx-auto btn text-white oxford_background">Submit</button>
+              <button onClick="jSubmit()" data-dismiss="modal" type="submit" class="mx-auto btn text-white oxford_background">Submit</button>
             </div>
           </div>
         </div>
+        <!--Alert-->
+        <div class="alert alert-success" role="alert" id="successAlert">
+          <h4 class="alert-heading">Well done!</h4>
+          <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+          <hr>
+          <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        </div>
+
       </div>
       <!--Modal end-->
+
+      <!--Modal success-->
+      <div class="modal">
+        <div class="modal-header  oxford_background">
+          <h5 class="modal-title text-white" id="exampleModalLongTitle">Thank you for Joining</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="thankYou">
+            <h4 class="alert-heading">Well done!</h4>
+        </div>
+      </div>
+
+
+      </div>
+      <!--Model success end-->
+
     </div>
   </div>
+
   <footer class="oxford_background text-white">
     <div class="container-fluid ">
       <div class="row">
@@ -345,7 +373,7 @@
         </div>
       </div>
       <div class="row">
-        <p class="mx-auto text-muted">Trademarked 2018</p>>
+        <p class="mx-auto text-muted">Trademarked 2018</p>
       </div>
     </div>
   </footer>
@@ -355,11 +383,13 @@
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script>
-      function jSubmit() {
-        console.log(document.getElementById("emailId").value);
-        $('exampleModalCenter2').modal('hide');
-    }
-</script>
+
+    function jSubmit() {
+      console.log(document.getElementById("emailId").value);
+      document.getElementById("emailId").value="";
+      $('successAlert').alert();
+      }
+  </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
