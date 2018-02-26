@@ -291,7 +291,15 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
+            <!--Confirmation text being-->
+            <div class="collapse" id="successAlert">
+              <div class="alert alert-success" role="alert">
+                  <h4 class="alert-heading">Awesome!</h4>
+                  <p>Please check your email for a confirmation</p>
+            </div>
+            </div>
+            <!--Confirmation text end-->
+            <div class="modal-body" id="bodyModal">
               <p>Please enter your email address so that we can email you the details.</p>
               <div class="input-group mb-2">
                 <div class="input-group-prepend ">
@@ -303,37 +311,14 @@
 
             <small id="emailHelp" class="form-text text-muted text-center">We'll never share your email with anyone else.</small>
             <div class="modal-footer">
-              <button onClick="jSubmit()" data-dismiss="modal" type="submit" class="mx-auto btn text-white oxford_background">Submit</button>
+              <button onClick="jSubmit()" data-toggle='collapse' data-target="#successAlert" aria-controls='successAlert' type="button" class="mx-auto btn text-white oxford_background">Submit</button>
             </div>
+            <!--Alert-->
+
           </div>
         </div>
-        <!--Alert-->
-        <div class="alert alert-success" role="alert" id="successAlert">
-          <h4 class="alert-heading">Well done!</h4>
-          <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-          <hr>
-          <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-        </div>
-
       </div>
       <!--Modal end-->
-
-      <!--Modal success-->
-      <div class="modal">
-        <div class="modal-header  oxford_background">
-          <h5 class="modal-title text-white" id="exampleModalLongTitle">Thank you for Joining</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" id="thankYou">
-            <h4 class="alert-heading">Well done!</h4>
-        </div>
-      </div>
-
-
-      </div>
-      <!--Model success end-->
 
     </div>
   </div>
@@ -385,10 +370,17 @@
   <script>
 
     function jSubmit() {
+      $('.collapse').collapse('hide');
       console.log(document.getElementById("emailId").value);
       document.getElementById("emailId").value="";
-      $('successAlert').alert();
+      $('#bodyModal').hide();
+      $('.collapse').collapse('show');
+      //$("#exampleModalCenter2").modal() 
+      //$("#exampleModalCenter2")[0].reset();
+      //$('#exampleModalCenter2').trigger('reset');
+      //document.getElementById("exampleModalCenter2").reset();
       }
+
   </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
