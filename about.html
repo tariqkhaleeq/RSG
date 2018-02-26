@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="landing page">
   <meta name="author" content="Nikos Papadopoulos, Tariq Khaleeq">
-  <link rel="icon" href="./media/favicon.ico">
+  <!--link rel="icon" href="./media/favicon.ico"-->
 
   <title>About</title>
 
@@ -23,7 +23,7 @@
     }
   </style>
 </head>
-<!--TODO:Fix image size-->
+<!--TODO:Fix image size; What is going on in the footer?!?!-->
 
 <body>
   <nav class="navbar navbar-expand-md oxford_background top">
@@ -128,7 +128,7 @@
       </div>
     </div>
 
-      <div class="row">
+      <div class="row pt-3">
         <div class="col-lg-2 offset-1">
           <img src="media/anubhav.png" alt="Anubhav Kaphle" class="img-thumbnail"></img>
         </div>
@@ -151,7 +151,8 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <p>He is interested in statistical learning and application of Artificial Intelligence to solve problems in health
+                    <p>Anubhav is a Masters student in Molecular Biology at the Max Planck Institute for Biophysical Chemistry, Göttingen.</p>
+                    <p> He is interested in statistical learning and application of Artificial Intelligence to solve problems in health
                     sectors. </p>
                     <p>Currently, he is applying different Statistical methosds for comprehensive discory of cis and trans
                     eQTLs in the human genome. He is a strong believer in opportunities that the student associations offer to connect
@@ -204,7 +205,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row pt-3">
         <div class="col-lg-2 offset-1">
           <img src="media/empty.jpg" alt="..." class="img-thumbnail"></img>
         </div>
@@ -234,7 +235,7 @@
 
         </div>
       </div>
-      <div class="row">
+      <div class="row pt-3">
         <div class="col-lg-2 offset-1">
           <img src="media/tariq.jpg" alt="..." class="img-thumbnail"></img>
         </div>
@@ -295,13 +296,13 @@
                 <div class="input-group-prepend ">
                   <span class="input-group-text" id="basic-addon1">Email</span>
                 </div>
-                <input type="text" class="form-control" placeholder="JohnDoe@example.com" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" id="emailId" class="form-control" placeholder="JohnDoe@example.com" aria-label="Username" aria-describedby="basic-addon1">
               </div>
             </div>
 
             <small id="emailHelp" class="form-text text-muted text-center">We'll never share your email with anyone else.</small>
             <div class="modal-footer">
-              <button type="button" class="mx-auto btn text-white oxford_background">Submit</button>
+              <button onClick="jSubmit()" data-dismiss="modal"type="submit" class="mx-auto btn text-white oxford_background">Submit</button>
             </div>
           </div>
         </div>
@@ -353,26 +354,21 @@
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <!--script>
-   $('#Modal').modal(options)
-   $('.collapse').collapse()
- $('#myCollapsible').collapse({
-  toggle: false
-})
- $('#myCollapsible').on('hidden.bs.collapse', function () {
-  // do something…
-})
-
-</script-->
+  <script>
+      function jSubmit() {
+        console.log(document.getElementById("emailId").value);
+        $('exampleModalCenter2').modal('hide');
+    }
+</script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
     crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="./bootstrap_source/assets/js/vendor/jquery.min.js"></script>')</script>
+  <!--script>window.jQuery || document.write('<script src="./bootstrap_source/assets/js/vendor/jquery.min.js"></script>')</script>
   <script src="./bootstrap_source/assets/js/vendor/popper.min.js"></script>
-  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script-->
 </body>
 
 </html>
