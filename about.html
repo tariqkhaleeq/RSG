@@ -16,6 +16,7 @@
   <link href="./style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  
   <style>
     body {
       font-family: 'Roboto';
@@ -92,6 +93,7 @@
           </div>
 
         </div>
+        
         <div class="col-lg-2">
           <img src="media/niko_small.jpeg" alt="Nikos Papadopoulos" class="img-thumbnail"></img>
         </div>
@@ -100,13 +102,26 @@
             <br>Vice President
             <br>
           </p>
+          <p class="">(Max Plank Institute for Biophysical Chemistry, University Göttingen)</p>
 
-          <p class="">(Max Plank Institute for Biophysical Chemistry, University Göttingen)
-            <br> Niko is Greek but his life as a Bioinformatician started with his studies in Munich. He is currently pursuing
+  
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Read more</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+		<div class="panel-body"><br> Niko is Greek but his life as a Bioinformatician started with his studies in Munich. He is currently pursuing
             his PhD in Computational Biology at the lab of Johannes Soeding (Max Planck Institute for Biophysical Chemistry,
             Göttingen), where he is developing a noise model for single-cell RNA sequencing data. As the vice president of
             RSG Germany he makes sure that stuff gets done and reminds people of what they have to do, when he doesn't forget
-            it himself. </p>
+            it himself.</div>
+	</div>
+  </div>
+         
+            
 
 
 
@@ -304,8 +319,19 @@
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script>
-    $('#exampleModal').modal(options)
+   $('#exampleModal').modal(options)
+   $('.collapse').collapse()
+ $('#myCollapsible').collapse({
+  toggle: false
+})
+ $('#myCollapsible').on('hidden.bs.collapse', function () {
+  // do something…
+})
+ 
   </script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="./bootstrap_source/assets/js/vendor/jquery.min.js"><\/script>')</script>
