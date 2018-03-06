@@ -74,7 +74,6 @@
 
   </nav>
 
-  <main role="main">
     <div class="banner">
       <div class="wrapper">
         <div class="col-6 offset-3">
@@ -111,7 +110,7 @@
 
                     <small id="emailHelp" class="form-text text-muted text-center">We'll never share your email with anyone else.</small>
                     <div class="modal-footer">
-                      <button type="button" class="mx-auto btn text-white oxford_background">Submit</button>
+                      <button onClick="jSubmit()" data-toggle='collapse' data-target="#successAlert" aria-controls='successAlert' type="button" class="mx-auto btn text-white oxford_background">Submit</button>
                     </div>
                   </div>
                 </div>
@@ -219,7 +218,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                <p>Please enter the detail below and we will get in touch shortly.</p>
+                <p>Please enter the detail below an d we will get in touch shortly.</p>
                 <form>
                   <div class="form-row">
                     <div class="form-group col-md-6">
@@ -366,10 +365,24 @@
         </div>
       </div>
     </footer>
-  </main>
+
 
 
   <!--JavaScript-->
+  <script>
+    function jSubmit() {
+      $('.collapse').collapse('hide');
+      console.log(document.getElementById("emailId").value);
+      document.getElementById("emailId").value = "";
+      $('#bodyModal').hide();
+      $('#joinButton').hide();
+      //$('.collapse').collapse('show');
+      //$("#exampleModalCenter2").modal()
+      //$("#exampleModalCenter2")[0].reset();
+      //$('#exampleModalCenter2').trigger('reset');
+      //document.getElementById("exampleModalCenter2").reset();
+    }
+  </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
