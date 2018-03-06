@@ -329,7 +329,7 @@
             </div>
             <!--Confirmation text end-->
             <div class="modal-body" id="bodyModal">
-              <p>Please enter your email address so that we can email you the details.</p>
+              <p id="joinText">Please enter your email address so that we can email you the details.</p>
               <div class="input-group mb-2">
                 <div class="input-group-prepend ">
                   <span class="input-group-text" id="basic-addon1">Email</span>
@@ -340,7 +340,7 @@
 
             <small id="emailHelp" class="form-text text-muted text-center">We'll never share your email with anyone else.</small>
             <div class="modal-footer">
-              <button onClick="jSubmit()" data-toggle='collapse' data-target="#successAlert" aria-controls='successAlert' type="button" class="mx-auto btn text-white oxford_background">Submit</button>
+              <button id="joinButton"onClick="jSubmit()" data-toggle='collapse' data-target="#successAlert" aria-controls='successAlert' type="button" class="mx-auto btn text-white oxford_background">Submit</button>
             </div>
             <!--Alert-->
 
@@ -401,13 +401,7 @@
       $('.collapse').collapse('hide');
       console.log(document.getElementById("emailId").value);
       document.getElementById("emailId").value = "";
-      $('#bodyModal').hide();
-      $('#joinButton').hide();
-      //$('.collapse').collapse('show');
-      //$("#exampleModalCenter2").modal()
-      //$("#exampleModalCenter2")[0].reset();
-      //$('#exampleModalCenter2').trigger('reset');
-      //document.getElementById("exampleModalCenter2").reset();
+      $('#emailId, #joinButton, #joinText, #basic-addon1').hide();
     }
   </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
