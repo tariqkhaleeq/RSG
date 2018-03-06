@@ -308,7 +308,7 @@
 
     <div class="row">
       <div class="mx-auto">
-        <button type="button" class="btn btn-round-lg btn-lg oxford_background text-white mb-5" data-toggle="modal" data-target="#exampleModalCenter2">Join now</button>
+        <button type="button" id="joinButton" class="btn btn-round-lg btn-lg oxford_background text-white mb-5" data-toggle="modal" data-target="#exampleModalCenter2">Join now</button>
       </div>
       <!-- Modal -->
       <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -324,7 +324,7 @@
             <div class="collapse" id="successAlert">
               <div class="alert alert-success" role="alert">
                 <h4 class="alert-heading">Awesome!</h4>
-                <p>Please check your email for a confirmation</p>
+                <p>Please check your email for a confirmation.</p>
               </div>
             </div>
             <!--Confirmation text end-->
@@ -402,7 +402,8 @@
       console.log(document.getElementById("emailId").value);
       document.getElementById("emailId").value = "";
       $('#bodyModal').hide();
-      $('.collapse').collapse('show');
+      $('#joinButton').hide();
+      //$('.collapse').collapse('show');
       //$("#exampleModalCenter2").modal()
       //$("#exampleModalCenter2")[0].reset();
       //$('#exampleModalCenter2').trigger('reset');
