@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="landing page">
+  <meta name="author" content="Tariq Khaleeq, Nikos Papadopoulos">
+  <link rel="icon" href="../../media/favicon.ico">
+
+  <title>March 2018</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
+  <link href="../../style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Roboto';
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md oxford_background top">
+    <a class="navbar-brand text-white" href="../../main.html">RSG Germany</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link disabled text-white" href="../../main.html">Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled text-white" href="../../events.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../about.html">About
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled text-white" href="../../newsletter.html">Newsletter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled text-white" href="../../contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+  <!--TODO: add subscription button. Add Footer.
+    Probably stylize background. Figure a way to make this dynamic other wise would require bruteforce to update this every month-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <br>
+        <h1>March 2018</h1>
+      </div>
+      <div class="col-sm-12">
+        <br>
+        <h5>Introduction</h5>
+      </div>
+      <div class="col-sm-12">
+        <p>Welcome back again RSG friends! The second newsletter of the German Regional Student Group of the iSCB Student Council
+          is out and for this month we are going to talk about single-cell sequencing techniques and possible discoveries
+          that have been made thanks to their application. We will also talk about their limitations and computational techniques
+          that best suit for handling such big datasets. The newsletter is split in three parts: two parts are related to
+          single-cell techniques and how can be used to connect different scales of complexity in the genome and one part
+          is related to the usage of Deep Learning, a machine learning technique that recently has been applied to genomics
+          to predict regulatory genomic regions based only on the DNA methylation values. Have fun and see you again in April!</p>
+
+        <em>the RSG Germany March Newsletter team (Tommaso Andreani, Yvonne Gladbach, Neetika Nath, Nikos Papadopoulos)</em>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+        <h5>
+          <b>
+            <span>Single-cell epigenomics: Recording the past and predicting the future</span>
+          </b>
+        </h5>
+      </div>
+      <div class="col-sm-12">
+        <p>Single-cell sequencing is an increasingly popular platform that allows the integration of different scales of complexity
+          at high resolutions providing advanced implications for diagnosing and disease progression. The integration of
+          various epigenome components with genomic measurement allows studying cellular heterogeneity at different scales
+          as well as the discovery of new layers of molecular connectivity between the genome and its functional output.
+        </p>
+
+        <p>One of the most studied epigenetic modification is 5-methylcytosine at CpG islands: bisulphite treatment converts
+          unmethylated cytosine to thymine leaving the methylated cytosines unmodified. In this way, it is possible to distinguish
+          and quantify unmethylated from the methylated cytosines. After quantification, the integrative analysis of these
+          values with different classes of genomic layers such as the one obtained from scATAC-Seq and scNOME-Seq can be
+          modelled to reveal useful connections among the different scales of complexity. This because the latter allows
+          the detection of chromatin modified regions as well as actively transcribed regions bounded by transcription factors.
+        </p>
+
+        <p>With the biological complexity comes the computational challenge in hands and the sparse coverage of processed single-cell
+          epigenome datasets requires careful consideration during downstream analyses. Three main points deserve careful
+          attention depending on the question: (1) adjustment for differences in global methylation, (2) pooling cells with
+          similar epigenetic profiles and (3) model-based approach to impute missing information by prediction. At the end,
+          the multitude of new single cell sequencing techniques will allow new levels of understanding at the systems level
+          and also will provide new opportunities to extract concepts that were hidden inside the data but that emerged from
+          the computational analysis.
+        </p>
+
+      </div>
+      <div class="col-sm-12">
+        <p>
+          <b>Reference:</b>
+          <a href="http://science.sciencemag.org/content/358/6359/69.long">Kelsey, Gavin, et al. Single-cell epigenomics: Recording the past and predicting the future. Science 358.6359 (2017):
+            69-75.
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h5>
+          <span>
+            <b>DeepCpG: accurate prediction of single-cell DNA methylation states using deep learning</b>
+          </span>
+        </h5>
+      </div>
+      <div class="col-sm-12">
+        <p>Analyzing data from Single-cell sequencing technology such as for DNA methylation has created new challenges in computational
+          biology. Current experimental protocols have already provided unprecedented insights into the regulation and dynamics
+          of DNA methylation in single cells and have uncovered new links between epigenetic and transcriptional heterogeneity.
+          However, these protocols produce incomplete coverage or CpG regions, since only small amounts of genomic DNA are
+          present in each cell. In order to enable genome-wide analysis, the first critical step is the development of prediction
+          methods for missing methylation states.
+        </p>
+
+        <p> DeepCpG is such an algorithm, developed for single cells methylation values. It is based on deep neural networks,
+          and leverages associations between DNA sequence patterns and methylation states, as well as relationships between
+          neighboring CpG sites. It learns DNA sequence and methylation patterns from the data and uses them to uncover previously
+          known and de novo sequence motifs associated with methylation changes / variability.
+        </p>
+
+        <p>But how can missing methylation be modeled? DeepCpG consists of three modules: (1) a DNA module to extract features
+          from the DNA sequence, (2) a CpG module to extract features from the CpG neighborhood of all cells and (3) a multi-task
+          Joint module that integrates the evidence from both modules to predict the methylation state of target CpG sites
+          for multiple cells.
+        </p>
+
+        <p>The modules are used to implement a feed forward artificial neural network also named as convolutional network, a
+          machine learning method previously applied in image and video recognition as well as natural language processing.
+        </p>
+      </div>
+      <div class="col-sm-12">
+        <p>
+          <b>Reference:</b>
+          <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1189-z">Angermueller, C., et al. DeepCpG: accurate prediction of single-cell DNA methylation states using deep learning.
+            Genome biology, (2017) 18(1), 67.</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h5>
+          <span>
+            <b>Single-cell transcriptional profiling of a multicellular organism</b>
+          </span>
+        </h5>
+      </div>
+      <div class="col-sm-12">
+        <p>Multicellular organisms have evolved complex structures such as tissues and organs composed of multiple different
+          cell types. Different cell types emerge from progenitor populations to fulfill specific physiological and developmental
+          functions. Until now, the expression of marker genes has been used to define cell types. For example, in the hematopoietic
+          lineage, membrane proteins were commonly used to characterize the different blood cell types and differentiation
+          stages. Today, next generation sequencing approaches at the single cell level allow profiling of the transcriptomes
+          of multiple single cells. Specifically developed computational methods can then be used to cluster them in small
+          groups belonging to a particular phenotype/cell type with a specific function.
+        </p>
+
+        <p>Cao et al. have developed a barcoding strategy that allowed them to expand single-cell RNA-sequencing to profile
+          nearly 50000 cells from Caenorhabditis elegans at the L2 larval stage. Clustering analysis of the transcriptomes
+          distributed the 762 somatic cells of the L2 larva in 27 different groups, corresponding to broader and more specific
+          cell types. Groups of cells with little morphological and transcriptional heterogeneity, like muscle cells, formed
+          rather large, unspecific groups. For other cell types, like neurons or intestinal cells, a lot of subtypes consisting
+          of as few as one cell in every worm were identified. The computational analysis was typical for a scRNA-seq experiment:
+          once the reads passed the quality control, were mapped to the reference genome. Afterwards the reads were converted
+          to transcript counts, resulting to a matrix of counts per gene per cell. This matrix was then clustered with t-distributed
+          stochastic neighbor embedding (t-SNE), a non-linear dimensionality reduction technique. Each cluster produced by
+          t-SNE was manual assigned to a cell type following literature research. Among the different cell types identified,
+          neurons and intestinal cells were the most characterized. Integrative analyses from modENCODE of Chromatin and
+          Transcription Factor binding sites data identified possible regulatory programs of these cells.
+        </p>
+
+        <p>In conclusion, single-cell sorting coupled with RNA sequencing is becoming a powerful technique to identify different
+          classes of cell types in multicellular organisms. This will be helpful for the description and discovery of different
+          cells of any tissue and organ. Additionally, it will help decipher developmental pathways and understand their
+          regulation. Already, the transcriptomic profile of a cell is increasingly used as a proxy of cell type. We are
+          still far from understanding possible mechanisms that dictate cellular differentiation only with the usage of the
+          transcriptome, but at the moment we can enjoy this “single cell journey” to investigate the multitude of cells
+          that colonize our body.
+        </p>
+      </div>
+      <div class="col-sm-12">
+        <p>
+          <b>Reference:</b>
+          <a href="http://science.sciencemag.org/content/357/6352/661.long">Cao, Junyue, et al. Comprehensive single-cell transcriptional profiling of a multicellular organism. Science 357.6352 (2017): 661-667.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+    <!--TODO: Fix footer; add rows properly-->
+    <footer class="oxford_background">
+      <div class="container-fluid">
+        <br>
+        <div class="row mt-3">
+          <div class="col-4 text-white  ">
+            <div class="row">
+              <div class="col-lg-4">
+                Street no.123
+              </div>
+              <div class="w-100"></div>
+              <div class="col-lg-5 ">
+                City Somewhere
+              </div>
+              <div class="w-100"></div>
+              <div class="col-lg-6 ">
+                Country Somewhere
+              </div>
+              <div class="w-100"></div>
+            </div>
+          </div>
+          <div class="col-4 text-white">
+            <ul class="mx-auto" style="list-style-type: none; padding: 0; text-align: center">
+              <li>
+                <a class="text-white" href="../../main.html">Home</a>
+              </li>
+              <li>
+                <a class="text-white" href="../../about.html">About</a>
+              </li>
+              <li>
+                <a class="text-white" href="../../contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4 text-white">
+            <address class="mr-4" style="text-align: right">
+              Follow us:
+              <br>
+              <a href="https://twitter.com/GermanyRsg" class="fa fa-twitter"></a>
+              <br>
+            </address>
+          </div>
+        </div>
+        <div class="row text-white">
+          <p class="mx-auto">Trademarked 2018</p>
+        </div>
+      </div>
+    </footer>
+    </main>
+    
+    
+    <!-- Bootstrap core JavaScript
+          ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+      crossorigin="anonymous"></script>
+    </body>
+    
+    </html>
