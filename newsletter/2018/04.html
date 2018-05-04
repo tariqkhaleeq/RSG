@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="landing page">
+  <meta name="author" content="Tariq Khaleeq, Nikos Papadopoulos">
+  <link rel="icon" href="../../media/favicon.ico">
+
+  <title>March 2018</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
+  <link href="../../style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Roboto';
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md oxford_background top">
+    <a class="navbar-brand text-white" href="../../main.html">RSG Germany</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link disabled text-white" href="../../main.html">Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled text-white" href="../../events.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../about.html">About
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled text-white" href="../../newsletter.html">Newsletter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled text-white" href="../../contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+  <!--TODO: add subscription button. Add Footer.
+    Probably stylize background. Figure a way to make this dynamic other wise would require bruteforce to update this every month-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <br>
+        <h1>March 2018</h1>
+      </div>
+      <div class="col-sm-12">
+        <br>
+        <h5>Introduction</h5>
+      </div>
+      <div class="col-sm-12">
+        <p>Welcome back again RSG friends! The April newsletter of the Regional Student Group of Germany of the iSCB Student
+          Council is out, and for this month we are going to talk about long sequencing reads technology, possible applications,
+          and limitations of this technique. We will also talk about the computational techniques that have been developed
+          to align such long reads during the last years. The newsletter is split into three parts: two parts are related
+          to what kind of improvement we expect from long reads technology to address molecular discoveries and possible
+          therapeutic application. The third part is revisiting the current state of the art in the computational techniques
+          that are used to align long reads datasets. Have fun and see you again in May!
+        </p>
+
+        <em>Yours: RGS Germany (ISCB Student Council) – Tommaso Andreani, Yvonne Gladbach, Neetika Nath, Nikos Papadopoulos</em>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+        <h5>
+          <b>
+            <span>Highly parallel direct RNA sequencing on an array of nanopores</span>
+          </b>
+        </h5>
+      </div>
+      <div class="col-sm-12">
+        <p>The transcriptome contains the expression of genetic information that characterizes the phenotype of an organism.
+          The development of high-throughput next-generation sequencing (NGS) has powered studying transcriptomes, includes
+          different expression levels of transcripts, and variations in gene structures (such as splicing or fusion genes),
+          through sequencing of complementary DNA (cDNA). In order to perform downstream bioinformatics analysis, the data
+          retrieved from the cells should be of high coverage, strand-specific, and capable of detecting the presence of
+          modified bases that can reveal variations in gene structures. These cDNA strands are amplified by polymerase chain
+          reaction (PCR), which can introduce bias such as loss of modifications in the RNA, distortion of relative cDNA
+          and dropout of some RNA species.
+        </p>
+
+        <p>To reduce such biases, Oxford Nanopore Technologies (ONT) has developed the nanopore-based platform, the MinION device.
+          It is designed to detect RNA molecules without any need of enzymatic synthesis reaction, hence why it is called
+          “direct RNA sequencing”. As the RNA molecule passes through an ion channel (“nanopore”), the different RNA bases
+          create a different change in current. These changes are then translated to base sequences with an inbuilt method
+          implementing a recurrent neural network (RNN). This suggests the measurement of RNA directly so that from ONT data
+          it is possible to detect nucleotide analogues in a strand-specific manner. The machine can produce reads with a
+          maximum length up to a few hundred thousand base pairs, which are particularly useful in the study of splicing
+          events detection.
+        </p>
+
+        <p>Nonetheless, there are several areas where an improvement is needed for direct RNA sequencing methods. Most software
+          developed for sequencing applications, including RNN, is not optimized to analyze direct RNA sequencing data, which
+          leads to lower coverage of the data. Also, the detection of splicing variants can be misleading if degraded RNA
+          is present in the sample. For the USB-sized MinION, clinical applications are not far ahead but an improvement
+          in throughput (compared with Illumina sequencing) will be required, for example when targeting regions likely to
+          contain a gene variations.
+        </p>
+
+      </div>
+      <div class="col-sm-12">
+        <p>
+          <b>Reference:</b>
+          <a href="https://www.nature.com/articles/nmeth.4577">Garalde, Daniel R., et al. “Highly parallel direct RNA sequencing on an array of nanopores.” Nature methods (2018).
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h5>
+          <span>
+            <b>Innovation and challenges in detecting long read overlap: an evaluation of the state-of-art</b>
+          </span>
+        </h5>
+      </div>
+      <div class="col-sm-12">
+        <p>One of the challenges in sequencing technology is the capability to sequence nucleic acid bases with high-throughput
+          performance and high resolution, where, “resolution” encompasses the number of reads sequenced and the length of
+          the respective sequences. Shotgun sequencing and next generation sequencing attempt to solve the problem by increasing
+          the number of read fragments that are sequenced. However, there is also the option of trying to increase the read
+          length. In order to address this problem, two companies have decided to implement a sequencing chemistry that allows
+          to sequence long reads from 15000 up to 100000 base pairs. These two companies, named Pac Bio (PB) and Oxford Nanopore
+          Technology (ONT), are the pioneer in this field and computational challenges started to emerge in order to handle
+          long reads datasets. However, long read sequencing chemistry comes with its own set of challenges.
+        </p>
+
+        <p> PB sequencing suffers from the introduction of insertions, deletions, and mismatches in the alignment, caused by
+          base calling errors in the order of 16%. Apart from the BLASAR aligner, most common tools do not consider in their
+          quality tests the error specific quality that is given by the introduction of structural and single point variants.
+          However, this limitation can be at least partially addressed with the usage of a hairpin adaptor to both sides
+          of a linear DNA sequence.
+        </p>
+
+        <p>ONT uses a cloud-based service called Metrichor that implements a hidden Markov model (HMM) with states of every
+          possible 6-mer. In the current HMM base calling methodology, if one state is identical to its next state, no net
+          change in the sequence can be detected. This means that homopolymer states longer than six cannot be captured as
+          they would be collapsed into a single 6-mer. These biases create an overall error rate in the base calling of 30-40%,
+          that can be reduced to 10-20% thanks to the generation of two-direction reads. As in PB, this involved the usage
+          of a hairpin adaptor allowing the nanopore to process both the forward and reverse strand of a sequence.
+        </p>
+
+        <p>There are different aligners for long reads sequencing datasets and they differ in respect of the alignment procedure:
+          alignment tracepoints and overlap regions. Alignment tracepoints approach is implemented in DALIGNER. Briefly,
+          the reads are aligned using a local alignment procedure that will output a traces point map used to compute the
+          full alignment of the reads. The main limitation of this algorithm is speed, and users need to split the dataset
+          into small pieces in order to increase the efficiency during the alignment. Other tools like BLASR and GraphMap
+          are typically used for PB datasets, while MHAP was specifically designed for ONT datasets. Minimap is another aligner
+          that combines concepts of DALIGNER, MHAP, and GraphMap.
+        </p>
+      </div>
+      <div class="col-sm-12">
+        <p>
+          <b>Reference:</b>
+          <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5408847/">Chu, Justin, et al. “Innovations and challenges in detecting long read overlap: an evaluation of the state-of-the-art.”
+            Bioinformatics 33.8 (2016): 1261-1270. Genome biology, (2017) 18(1), 67.</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h5>
+          <span>
+            <b>A single-molecule long-read survey of the human transcriptome</b>
+          </span>
+        </h5>
+      </div>
+      <div class="col-sm-12">
+        <p>Recent advances in short read RNA-sequencing afford snapshots of the transcriptome, revealing which genes are transcribed
+          and to what amount. These snapshots reveal little additional information about longer RNA molecules though. More
+          answers may be provided by what many consider the 3rd generation of sequencing technologies, enabling the sequencing
+          of long single molecules without amplification. The moment has come when an entire RNA molecule can be sequenced
+          from the 5’ to the 3’ end thanks to protocols from Pacific Biosciences (PacBio) or Oxford Nanopores (ONT). While
+          there are some issues complicating the sequencing of longer RNA molecules, nevertheless, complete intron structures
+          are often preserved. With this technology, more than 10% of previously unknown RNA structures could be annotated.
+        </p>
+
+        <p>With single-molecule long reads, the previously elusive full-length transcript isoforms can be tackled and more insights
+          in the expression of long non-coding RNA and its isoforms can be gained. The sequencing platform of PacBio shows
+          no context-specific errors and produces long reads up to ~7kbp. Compared to the 2nd generation sequencing, the
+          error rate in these reads is still very high, so that improving the read lengths and the base-calling algorithms
+          for the PacBio platform are required.
+        </p>
+
+        <p>One such improving approach is based on deriving high-quality, single-molecule, circular-consensus (CCS) reads. Its
+          limiting factor is the cDNA-template size which is often
+          <1.5kbp and therefore smaller than the complete read length
+            of the PacBio platform. All introns of the original transcript are represented in the CCS reads including the 5’
+            exons. Little sequence loss can be observed by 1.5kbp reads. The longer the transcript is, the longer the sequence
+            of missing nucleotides. Evaluating the completeness of the full-length RNA from 5’ to 3’ ends was done with a Hidden
+            Markov Model to identify whether the molecules start or end with a poly-A tail. 67% of CCS reads corresponded to
+            polyadenylated RNAs of high quality, but some CCS reads spanned entire cDNA with lower quality. Using GMAP aligner
+            introns, pre-mRNAs and exons could be mapped to hg19. The unannotated transcripts belonged to protein-coding genes,
+            spliced gene-class including the long noncoding RNA genes, or pseudogenes. These classes also represent a challenge
+            due to lower expression levels and therefore higher propensity for noise. </p>
+
+            <p>Overall, the represented approach is depending on the completeness of the cDNA synthesis, but not on amplification
+              or fragmentation like other approaches. It addresses the complete understanding of all spliced RNAs within
+              a transcriptome with improved read length and base-calling algorithms instead of error correction or hybrid
+              long reads based on high-quality short reads.
+            </p>
+      </div>
+      <div class="col-sm-12">
+        <p>
+          <b>Reference:</b>
+          <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4075632/">Sharon, Donald et al. “A single-molecule long-read survey of the human transcriptome.” Nature Biotechnology 33.11
+            (2013): 1009-1014.
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--TODO: Fix footer; add rows properly-->
+  <footer class="oxford_background">
+    <div class="container-fluid">
+      <br>
+      <div class="row mt-3">
+        <div class="col-4 text-white  ">
+          <div class="row">
+            <div class="col-lg-4">
+              Street no.123
+            </div>
+            <div class="w-100"></div>
+            <div class="col-lg-5 ">
+              City Somewhere
+            </div>
+            <div class="w-100"></div>
+            <div class="col-lg-6 ">
+              Country Somewhere
+            </div>
+            <div class="w-100"></div>
+          </div>
+        </div>
+        <div class="col-4 text-white">
+          <ul class="mx-auto" style="list-style-type: none; padding: 0; text-align: center">
+            <li>
+              <a class="text-white" href="../../main.html">Home</a>
+            </li>
+            <li>
+              <a class="text-white" href="../../about.html">About</a>
+            </li>
+            <li>
+              <a class="text-white" href="../../contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4 text-white">
+          <address class="mr-4" style="text-align: right">
+            Follow us:
+            <br>
+            <a href="https://twitter.com/GermanyRsg" class="fa fa-twitter"></a>
+            <br>
+          </address>
+        </div>
+      </div>
+      <div class="row text-white">
+        <p class="mx-auto">Trademarked 2018</p>
+      </div>
+    </div>
+  </footer>
+  </main>
+
+
+  <!-- Bootstrap core JavaScript
+          ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
