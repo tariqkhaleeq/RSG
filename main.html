@@ -207,7 +207,9 @@
                 </div>
               </div>
               <p id="detail" class="text-dark">Please enter the detail below and we will get in touch shortly.</p>
-              <form id="subscribeForm" class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSfMU-nZGG3A1eZ5yKSrJ71xdIZFEGbRPUqayoV9v2xWTAWi-A/formResponse">
+              <script type="text/javascript">var submitted = false;</script>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {formSubmit()}"></iframe>
+              <form id="subscribeForm" class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSfMU-nZGG3A1eZ5yKSrJ71xdIZFEGbRPUqayoV9v2xWTAWi-A/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="entry.218218331">First Name</label>
