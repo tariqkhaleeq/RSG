@@ -56,22 +56,22 @@
         <p class="lead">It was a pleasure to make your acquaintance. Lets get to know each better.</p>
       </div>
     </div>
-    <form class="mt-4">
-      <div class="form-group">
-        <label for="exampleFormControlInput1" class="font-weight-bold">Email address</label>
-        <input type="text" class="form-control" id="contactEmailinput1" placeholder="name@example.com">
-      </div>
+    <script type="text/javascript">var submitted = false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {formSubmit()}"></iframe>
+    <form id="subscribeForm" class="form" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLScosmQEdKiyYL7NeHdUK86JI2La4SNcLD8ZGxrt3Rbl1ao8dA/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+        <div class="form-group">
+          <label for="emailAddress" class="font-weight-bold">Email</label>
+          <input name="emailAddress" type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+        </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea1" class="font-weight-bold">Message</label>
-        <textarea class="form-control" id="textArea" rows="4" placeholder="You guys are doing an awesome job! Keep it up!"></textarea>
+        <input name="entry.1733975456" class="form-control" id="textArea" rows="4" placeholder="You guys are doing an awesome job! Keep it up!">
+      </div>
+      <div class="modal-footer">
+        <input id="submitButton" type="submit" value="Submit" class="mx-auto btn text-white oxford_background"/>
       </div>
     </form>
 
-    <div class="row mb-4">
-      <div class="col">
-        <button type="button" onClick="cSubmit()" class="btn btn-round-lg btn-lg oxford_background text-white" aria-controls='successAlert' data-toggle='collapse' data-target="#successAlert">Send</button>
-      </div>
-    </div>
     <!--Alert message-->
     <div class="collapse" id="successAlert">
       <div class="alert alert-success" role="alert">
@@ -116,7 +116,13 @@
       $('form').trigger("reset");
       //$('#contactEmailinput1, #exampleFormControlTextarea1').hide();
     }
+    
+    function formSubmit() {
+      console.log($('form').serializeArray());
+      $('form').trigger("reset");
+      $('#subscribeForm, #detail, #submitButton').hide();
 
+    }
   </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
