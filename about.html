@@ -303,49 +303,40 @@
     </div>
 
     <div class="row">
-      <div class="mx-auto">
-        <button type="button" id="joinButton" class="btn btn-round-lg btn-lg oxford_background text-white mb-5" data-toggle="modal" data-target="#exampleModalCenter2">Join now</button>
-      </div>
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header  oxford_background">
-              <h5 class="modal-title text-white" id="exampleModalLongTitle">Thank you for Joining</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <!--Confirmation text being-->
-            <div class="collapse" id="successAlert">
-              <div class="alert alert-success" role="alert">
-                <h4 class="alert-heading">Awesome!</h4>
-                <p>Please check your email for a confirmation.</p>
-              </div>
-            </div>
-            <!--Confirmation text end-->
-            <div class="modal-body" id="bodyModal">
-              <p id="joinText">Please enter your email address so that we can email you the details.</p>
-              <div class="input-group mb-2">
-                <div class="input-group-prepend ">
-                  <span class="input-group-text" id="basic-addon1">Email</span>
+        <div class="mx-auto">
+          <button type="button" class="btn btn-round-lg btn-lg oxford_background text-white mb-5 " data-toggle="modal" data-target="#exampleModalCenter">Join now</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header  oxford_background">
+                  <h5 class="modal-title text-white" id="exampleModalLongTitle">Thank you for Joining</h5>
                 </div>
-                <input type="text" id="emailId" class="form-control" placeholder="JohnDoe@example.com" aria-label="Username" aria-describedby="basic-addon1">
+                <div class="modal-body">
+                  <p id="detail" class="text-dark">Please enter your email address so that we can email you the details.</p>
+                  <script type="text/javascript">var submitted = false;</script>
+                  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {formSubmit()}"></iframe>
+                  <form id="subscribeForm" class="form" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSc8NYDVabDgBfwbMHmKfq7iJtcvdOrNza1gfjmMj8v09r2o7g/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                    <div class="form-group">
+                      <label for="emailAddress">Email</label>
+                      <input name="emailAddress" type="email" class="form-control" id="inputEmail" placeholder="random.mary@example.com">
+                    </div>
+                    <div class="modal-footer">
+                      <input id="submitButton" type="submit" value="Submit" class="mx-auto btn text-white oxford_background"/>
+                    </div>
+                  </form>
+    
+                  <small id="Help" class="form-text text-muted text-center">We'll never share your email with anyone else.</small>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button id="submitButton" onClick="formSubmit()" data-toggle='collapse' data-target="#successAlert" aria-controls='successAlert' type="button" class="mx-auto btn text-white oxford_background">Submit</button>
+                </div> -->
               </div>
-            </div>
-
-            <small id="emailHelp" class="form-text text-muted text-center">We'll never share your email with anyone else.</small>
-            <div class="modal-footer">
-              <button id="joinButton"onClick="jSubmit()" data-toggle='collapse' data-target="#successAlert" aria-controls='successAlert' type="button" class="mx-auto btn text-white oxford_background">Submit</button>
-            </div>
-            <!--Alert-->
-
           </div>
         </div>
+        <!--Modal end-->
       </div>
-      <!--Modal end-->
-
-    </div>
   </div>
 
   <footer class="oxford_background">
@@ -377,11 +368,11 @@
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script>
-    function jSubmit() {
-      $('.collapse').collapse('hide');
-      console.log(document.getElementById("emailId").value);
-      document.getElementById("emailId").value = "";
-      $('#emailId, #joinButton, #joinText, #basic-addon1').hide();
+    function formSubmit() {
+      console.log($('form').serializeArray());
+      $('form').trigger("reset");
+      $('#subscribeForm, #detail, #submitButton').hide();
+
     }
   </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
